@@ -9,8 +9,12 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,197 +25,10 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Container(
               height: 360.0,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: Colors.white
-              ),
-              child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(5.0),
-                      child: Row(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 70.0,
-                              width: 70.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(35.0),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/iecse.jpg'),
-                                      fit: BoxFit.fill
-                                  )
-                              ),
-                            ),
-                            SizedBox(width: 30.0,),
-                            Text(
-                              'IECSE',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(width: 185.0,),
-                            Container(
-                              height: 40.0,
-                              width: 40.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(35.0),
-                                color: Colors.white,
-                              ),
-                              child: IconButton(
-                                icon: Icon(Icons.more_vert),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                      ),
-                    ),
-                    SizedBox(height: 5.0,),
-                    ClipRRect(
-                      child: Container(
-                        height: 130.0,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/ieev.jpg'),
-                                fit: BoxFit.cover
-                            )
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 5.0,),
-                    Padding(
-                      padding: EdgeInsets.only(top: 5.0, left: 15.0),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            height: 82.0,
-                            width: 70.0,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Colors.blueGrey[50]
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
-                              child: Column(
-                                children: <Widget>[
-                                  Text(
-                                    'JUN',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20.0
-                                    ),
-                                  ),
-                                  SizedBox(height: 15.0,),
-                                  Text(
-                                    '22',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 20.0
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          //Circular Image of club with club name at below
-                          SizedBox(width: 45.0,),
-                          Padding(
-                            padding: EdgeInsets.only(left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  'ML Meet',                    //Event name
-                                  style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold
-                                  ),),
-                                SizedBox(height: 4.0,),
-
-                                // add event description
-                                Text(
-                                  'Session on ML',   //Event name
-                                  style: TextStyle(
-                                    fontSize: 11.0,
-                                    color: Colors.black,
-                                  ),),
-                                SizedBox(height: 4.0,),
-                                Text(
-                                  'AB5 204',
-                                  style: TextStyle(
-                                      fontSize: 18.0,
-                                      color: Colors.grey
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 20.0,),
-
-                          //bottom modal
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 5.0,),
-                    Padding(
-                      padding: EdgeInsets.only(top: 2.0, left: 10.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            height: 40.0,
-                            width: 40.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(35.0),
-                              color: Colors.white,
-                            ),
-                            child: IconButton(
-                              icon: Icon(Icons.alarm),
-                            ),
-                          ),
-                          Container(
-                            height: 40.0,
-                            width: 40.0,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(35.0),
-                                color: Colors.white
-                            ),
-                            child: IconButton(
-                              icon: Icon(Icons.share),
-                              color: Colors.white,
-                            ),
-                          ),
-                          Container(
-                            height: 40.0,
-                            width: 40.0,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(35.0),
-                                color: Colors.white
-                            ),
-                            child: IconButton(
-                              icon: Icon(Icons.favorite),
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            SizedBox(height: 20.0,),
-            Container(
-              height: 360.0,
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
                   color: Colors.white
@@ -265,7 +82,214 @@ class MyApp extends StatelessWidget {
                   ClipRRect(
                     child: Container(
                       height: 130.0,
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/ieev.jpg'),
+                              fit: BoxFit.cover
+                          )
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 5.0,),
+                  Padding(
+                    padding: EdgeInsets.only(top: 5.0, left: 15.0),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          height: 82.0,
+                          width: 70.0,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15.0),
+                              color: Colors.blueGrey[50]
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                top: 10.0, left: 10.0, right: 10.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'JUN',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 20.0
+                                  ),
+                                ),
+                                SizedBox(height: 15.0,),
+                                Text(
+                                  '22',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 20.0
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        //Circular Image of club with club name at below
+                        SizedBox(width: 45.0,),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'ML Meet', //Event name
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                ),),
+                              SizedBox(height: 4.0,),
+
+                              // add event description
+                              Text(
+                                'Session on ML', //Event name
+                                style: TextStyle(
+                                  fontSize: 11.0,
+                                  color: Colors.black,
+                                ),),
+                              SizedBox(height: 4.0,),
+                              Text(
+                                'AB5 204',
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    color: Colors.grey
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 20.0,),
+                        RaisedButton(
+                          child: IconButton(
+                            icon: Icon(Icons.card_giftcard),
+                            color: Colors.white,
+                          ),
+                          onPressed: () => _onButtonPressed(),
+                        )
+                        //bottom modal
+
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 5.0,),
+                  Padding(
+                    padding: EdgeInsets.only(top: 2.0, left: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          height: 40.0,
+                          width: 40.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(35.0),
+                            color: Colors.white,
+                          ),
+                          child: IconButton(
+                            icon: Icon(Icons.alarm),
+                          ),
+                        ),
+                        Container(
+                          height: 40.0,
+                          width: 40.0,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(35.0),
+                              color: Colors.white
+                          ),
+                          child: IconButton(
+                            icon: Icon(Icons.share),
+                            color: Colors.white,
+                          ),
+                        ),
+                        Container(
+                          height: 40.0,
+                          width: 40.0,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(35.0),
+                              color: Colors.white
+                          ),
+                          child: IconButton(
+                            icon: Icon(Icons.favorite),
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 20.0,),
+            Container(
+              height: 360.0,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                  color: Colors.white
+              ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Row(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              height: 70.0,
+                              width: 70.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(35.0),
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/iecse.jpg'),
+                                      fit: BoxFit.fill
+                                  )
+                              ),
+                            ),
+                            SizedBox(width: 30.0,),
+                            Text(
+                              'IECSE',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(width: 185.0,),
+                            Container(
+                              height: 40.0,
+                              width: 40.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(35.0),
+                                color: Colors.white,
+                              ),
+                              child: IconButton(
+                                icon: Icon(Icons.more_vert),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 5.0,),
+                  ClipRRect(
+                    child: Container(
+                      height: 130.0,
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width,
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage('assets/ieev.jpg'),
@@ -282,54 +306,55 @@ class MyApp extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Container(
-                              height: 40.0,
-                              width: 70.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  color: Colors.blueGrey[50]
-                              ),
-                              child: Padding(
-                                padding: (EdgeInsets.only(top: 10.0)),
-                                child: Text(
-                                  'JUN 22',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15.0
-                                  ),
+                                height: 40.0,
+                                width: 70.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                    color: Colors.blueGrey[50]
                                 ),
-                              )
+                                child: Padding(
+                                  padding: (EdgeInsets.only(top: 10.0)),
+                                  child: Text(
+                                    'JUN 22',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15.0
+                                    ),
+                                  ),
+                                )
                             ),
                             SizedBox(height: 2.0,),
                             Container(
-                              height: 40.0,
-                              width: 70.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  color: Colors.blueGrey[50]
-                              ),
-                              child: Padding(
-                                padding: (EdgeInsets.only(top: 10.0)),
-                                child: Text(
-                                  'JUN 29',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15.0
-                                  ),
+                                height: 40.0,
+                                width: 70.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                    color: Colors.blueGrey[50]
                                 ),
-                              )
+                                child: Padding(
+                                  padding: (EdgeInsets.only(top: 10.0)),
+                                  child: Text(
+                                    'JUN 29',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 15.0
+                                    ),
+                                  ),
+                                )
                             ),
                           ],
                         ),
                         SizedBox(width: 45.0,),
                         Padding(
-                          padding: EdgeInsets.only(left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
+                          padding: EdgeInsets.only(
+                              left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                'ML Meet',                    //Event name
+                                'ML Meet', //Event name
                                 style: TextStyle(
                                     fontSize: 20.0,
                                     color: Colors.black,
@@ -339,7 +364,7 @@ class MyApp extends StatelessWidget {
 
                               // add event description
                               Text(
-                                'Session on ML',   //Event name
+                                'Session on ML', //Event name
                                 style: TextStyle(
                                   fontSize: 11.0,
                                   color: Colors.black,
@@ -411,110 +436,42 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  void _onButtonPressed() {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Column(
+              children: <Widget>[
+                Text(
+                  '1st Prize: 45000/-',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Text(
+                  '2st Prize: 35000/-',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Text(
+                  '3st Prize: 25000/-',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
+  }
 }
 
-Widget app (BuildContext context) {
-return Scaffold(
-backgroundColor: Colors.yellowAccent[100],
-body: Column(
-children: <Widget>[
-SizedBox(height: 20.0,),
-Container(
-height: 200.0,
-width: 500.0,
-child: Container(
-height: 150.0,
-decoration: BoxDecoration(
-image: DecorationImage(
-image: AssetImage('assets/iosd.png'),
-fit: BoxFit.fill
-)
-),
-),
-),
-Padding(
-padding: EdgeInsets.all(5.0),
-child: RawMaterialButton(
-constraints: BoxConstraints(
-minHeight: 40.0,
-minWidth: (MediaQuery.of(context).size.width - 15.0)/2),
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-child: Padding(
-padding: EdgeInsets.only(left: 30.0, top: 5.0, right: 30.0),
-child: Column(
-children: <Widget>[
-SizedBox(height: 5.0,),
-Row(
-children: <Widget>[
-SizedBox(width: 35.0,),
-Text(
-'22nd Jan 2020',
-style: TextStyle(
-fontSize: 15.0
-),
-),
-SizedBox(width: 55),
-Text(
-'29th Jan 2020',
-style: TextStyle(
-fontSize: 15.0
-),
-)
-],
-),
-SizedBox(height: 10.0,),
-RawMaterialButton(
-constraints: BoxConstraints(
-minHeight: 25.0,
-minWidth: MediaQuery.of(context).size.width
-),
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-child: Text(
-'@ MIT Playgrounds',
-style: TextStyle(
-fontSize: 15.0,
-),)
-),
-],
-),
-)
-),
-),
-Padding(
-padding: EdgeInsets.only(left: 20.0, right: 15.0),
-child: Row(
-children: <Widget>[
-CircleAvatar(
-backgroundImage: NetworkImage('https://avatars2.githubusercontent.com/u/20293767?s=280&v=4'),
-radius: 40.0,
-),
-SizedBox(width: 45.0,),
-Text(
-'IOSD',
-style: TextStyle(
-fontSize: 16.0
-),
-)
-]
-),
-),
-Padding(
-padding: (EdgeInsets.all(5.0)),
-child: RawMaterialButton(
-constraints: BoxConstraints(
-minHeight: 50.0,
-minWidth: MediaQuery.of(context).size.width
-),
-shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-child: Text(
-'Come to witness events of a lifetime !!!!',
-style: TextStyle(
-fontSize: 15.0,
-),
-)
-),
-)
-],
-)
-);
-}
