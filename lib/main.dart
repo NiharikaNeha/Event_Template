@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       body: Padding(
-        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0, top: 50.0),
+        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 5.0, top: 50.0),
         child: Column(
           children: <Widget>[
             Container(
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(width: 180.0,),
+                            SizedBox(width: 185.0,),
                             Container(
                               height: 40.0,
                               width: 40.0,
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
                                 color: Colors.white,
                               ),
                               child: IconButton(
-                                icon: Icon(Icons.add),
+                                icon: Icon(Icons.more_vert),
                               ),
                             ),
                           ],
@@ -90,14 +90,14 @@ class MyApp extends StatelessWidget {
                       child: Row(
                         children: <Widget>[
                           Container(
-                            height: 80.0,
-                            width: 122.0,
+                            height: 82.0,
+                            width: 70.0,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15.0),
                                 color: Colors.blueGrey[50]
                             ),
                             child: Padding(
-                              padding: EdgeInsets.only(top: 12.0, left: 10.0, right: 10.0),
+                              padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -120,7 +120,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           //Circular Image of club with club name at below
-                          SizedBox(width: 25.0,),
+                          SizedBox(width: 45.0,),
                           Padding(
                             padding: EdgeInsets.only(left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
                             child: Column(
@@ -210,7 +210,7 @@ class MyApp extends StatelessWidget {
               ),
             SizedBox(height: 20.0,),
             Container(
-              height: 350.0,
+              height: 360.0,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
@@ -218,10 +218,53 @@ class MyApp extends StatelessWidget {
               ),
               child: Column(
                 children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Row(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              height: 70.0,
+                              width: 70.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(35.0),
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/iecse.jpg'),
+                                      fit: BoxFit.fill
+                                  )
+                              ),
+                            ),
+                            SizedBox(width: 30.0,),
+                            Text(
+                              'IECSE',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(width: 185.0,),
+                            Container(
+                              height: 40.0,
+                              width: 40.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(35.0),
+                                color: Colors.white,
+                              ),
+                              child: IconButton(
+                                icon: Icon(Icons.more_vert),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 5.0,),
                   ClipRRect(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
                     child: Container(
-                      height: 175.0,
+                      height: 130.0,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -231,73 +274,55 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 15.0,),
+                  SizedBox(height: 5.0,),
                   Padding(
                     padding: EdgeInsets.only(top: 5.0, left: 15.0),
                     child: Row(
                       children: <Widget>[
-                        Container(
-                          height: 85.0,
-                          width: 60.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              color: Colors.blueGrey[50]
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 12.0, left: 10.0, right: 10.0),
-                            child: Column(
-                              children: <Widget>[
-                                Text(
-                                  'JUN',
+                        Column(
+                          children: <Widget>[
+                            Container(
+                              height: 40.0,
+                              width: 70.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  color: Colors.blueGrey[50]
+                              ),
+                              child: Padding(
+                                padding: (EdgeInsets.only(top: 10.0)),
+                                child: Text(
+                                  'JUN 22',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 20.0
+                                      fontSize: 15.0
                                   ),
                                 ),
-                                SizedBox(height: 15.0,),
-                                Text(
-                                  '22',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 20.0
-                                  ),
-                                ),
-                              ],
+                              )
                             ),
-                          ),
-                        ),
-                        SizedBox(width: 2.0,),
-                        Container(
-                          height: 85.0,
-                          width: 60.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
-                              color: Colors.blueGrey[50]
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 12.0, left: 10.0, right: 10.0),
-                            child: Column(
-                              children: <Widget>[
-                                Text(
-                                  'JUN',
+                            SizedBox(height: 2.0,),
+                            Container(
+                              height: 40.0,
+                              width: 70.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  color: Colors.blueGrey[50]
+                              ),
+                              child: Padding(
+                                padding: (EdgeInsets.only(top: 10.0)),
+                                child: Text(
+                                  'JUN 29',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 20.0
+                                      fontSize: 15.0
                                   ),
                                 ),
-                                SizedBox(height: 15.0,),
-                                Text(
-                                  '29',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 20.0
-                                  ),
-                                ),
-                              ],
+                              )
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(width: 25.0,),
+                        SizedBox(width: 45.0,),
                         Padding(
                           padding: EdgeInsets.only(left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
                           child: Column(
@@ -330,34 +355,10 @@ class MyApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(width: 20.0,),
-                        Column(
-                          children: <Widget>[
-                            Container(
-                              height: 70.0,
-                              width: 70.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(35.0),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/iecse.jpg'),
-                                      fit: BoxFit.fill
-                                  )
-                              ),
-                            ),
-                            SizedBox(height: 5.0,),
-                            Text(
-                              'IECSE',
-                              style: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            )
-                          ],
-                        ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 10.0,),
+                  SizedBox(height: 5.0,),
                   Padding(
                     padding: EdgeInsets.only(top: 2.0, left: 10.0),
                     child: Row(
