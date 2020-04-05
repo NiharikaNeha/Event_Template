@@ -64,6 +64,7 @@ class _MyAppState extends State<MyApp> {
                               )
                           ),
                         ),
+                        elevation: 0.0,
                         onPressed: () => _onButtonPressed(),
                       )
                     ],
@@ -222,7 +223,9 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
+
             SizedBox(height: 40.0,),
+
             Container(
               height: 330.0,
               width: MediaQuery
@@ -258,168 +261,213 @@ class _MyAppState extends State<MyApp> {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Container(
-                                height: 40.0,
-                                width: 70.0,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    color: Colors.blueGrey[50]
-                                ),
-                                child: Padding(
-                                  padding: (EdgeInsets.only(top: 10.0)),
-                                  child: Text(
-                                    'JUN 22',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 15.0
+                            Row(
+                              children: <Widget>[
+                                Column(
+                                  children: <Widget>[
+                                    Container(
+                                        height: 40.0,
+                                        width: 70.0,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(15.0),
+                                            color: Colors.blueGrey[50]
+                                        ),
+                                        child: Padding(
+                                          padding: (EdgeInsets.only(top: 10.0)),
+                                          child: Text(
+                                            'JUN 22',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15.0
+                                            ),
+                                          ),
+                                        )
                                     ),
-                                  ),
-                                )
-                            ),
-                            SizedBox(height: 2.0,),
-                            Container(
-                                height: 40.0,
-                                width: 70.0,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    color: Colors.blueGrey[50]
-                                ),
-                                child: Padding(
-                                  padding: (EdgeInsets.only(top: 10.0)),
-                                  child: Text(
-                                    'JUN 29',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 15.0
+                                    SizedBox(height: 2.0,),
+                                    Container(
+                                        height: 40.0,
+                                        width: 70.0,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(15.0),
+                                            color: Colors.blueGrey[50]
+                                        ),
+                                        child: Padding(
+                                          padding: (EdgeInsets.only(top: 10.0)),
+                                          child: Text(
+                                            'JUN 29',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15.0
+                                            ),
+                                          ),
+                                        )
                                     ),
-                                  ),
-                                )
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 45.0,),
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                'ML Meet', //Event name
-                                style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold
-                                ),),
-                              SizedBox(height: 4.0,),
+                                  ],
+                                ),
+                                SizedBox(width: 25.0,),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 10.0, right: 20.0, top: 5.0, bottom: 5.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        'ML Meet', //Event name
+                                        style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold
+                                        ),),
+                                      SizedBox(height: 4.0,),
 
-                              // add event description
-                              Text(
-                                'Session on ML', //Event name
-                                style: TextStyle(
-                                  fontSize: 11.0,
-                                  color: Colors.black,
-                                ),),
-                              SizedBox(height: 4.0,),
-                              Text(
-                                'AB5 204',
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    color: Colors.grey
+                                      // add event description
+                                      Text(
+                                        'Session on ML', //Event name
+                                        style: TextStyle(
+                                          fontSize: 11.0,
+                                          color: Colors.black,
+                                        ),),
+                                      SizedBox(height: 4.0,),
+                                      Text(
+                                        'AB5 204',
+                                        style: TextStyle(
+                                            fontSize: 18.0,
+                                            color: Colors.grey
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              )
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 20.0,),
-                        RaisedButton(
-                          color: Colors.white,
-                          child: Container(
-                            height: 60.0,
-                            width: 50.0,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                image: DecorationImage(
-                                    image: AssetImage('assets/trophy.jpeg'),
-                                    fit: BoxFit.contain
-                                )
+                              ],
                             ),
-                          ),
-                          onPressed: () => _onButtonPressed(),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 5.0,),
-                  Padding(
-                    padding: EdgeInsets.only(top: 2.0, left: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(35.0),
-                            color: Colors.white,
-                          ),
-                          child: IconButton(
-                            icon: Icon(Icons.alarm),
-                          ),
-                        ),
-                        Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(35.0),
-                              color: Colors.white
-                          ),
-                          child: IconButton(
-                            icon: Icon(Icons.share),
-                            color: Colors.white,
-                          ),
-                        ),
-                        Container(
-                          height: 40.0,
-                          width: 40.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(35.0),
-                              color: Colors.white
-                          ),
-                          child: IconButton(
-                            icon: Icon(Icons.favorite),
-                            color: Colors.white,
-                          ),
-                        ),
+                            SizedBox(height: 10.0,),
+                            Padding(
+                              padding: EdgeInsets.only(top: 2.0, left: 5.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    height: 50.0,
+                                    width: 50.0,
+                                    child: Column(
+                                      children: <Widget>[
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(25.0),
+                                              image: DecorationImage(
+                                                  image: AssetImage('assets/iecse.jpg'),
+                                                  fit: BoxFit.fill
+                                              )
+                                          ),
+                                        ),
+                                        Text(
+                                          'IECSE',
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50.0,
+                                    width: 50.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(35.0),
+                                      color: Colors.white,
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.alarm),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50.0,
+                                    width: 50.0,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(35.0),
+                                        color: Colors.white
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.share),
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 50.0,
+                                    width: 50.0,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(35.0),
+                                        color: Colors.white
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.favorite),
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ) ,
+                        SizedBox(width: 10.0,),
                         Column(
                           children: <Widget>[
-                            Container(
-                              height: 30.0,
-                              width: 30.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25.0),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/iecse.jpg'),
-                                      fit: BoxFit.fill
-                                  )
-                              ),
+                            Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 50.0,
+                                  width: 50.0,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      image: DecorationImage(
+                                          image: AssetImage('assets/trophy.jpeg'),
+                                          fit: BoxFit.contain
+                                      )
+                                  ),
+                                ),
+                                SizedBox(width: 10.0,),
+                                Text(
+                                  'PRIZES',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17.0
+                                  ),
+                                )
+                              ],
                             ),
+                            SizedBox(height: 7.0,),
                             Text(
-                              'IECSE',
-                              textAlign: TextAlign.start,
+                              '1st    20,000/-',
                               style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 19.0
                               ),
                             ),
+                            SizedBox(height: 5.0,),
+                            Text(
+                              '2st    20,000/-',
+                              style: TextStyle(
+                                  fontSize: 19.0
+                              ),
+                            ),
+                            SizedBox(height: 5.0,),
+                            Text(
+                              '3st    20,000/-',
+                              style: TextStyle(
+                                  fontSize: 19.0
+                              ),
+                            )
                           ],
-                        ),
+                        )
                       ],
-                    ),
-                  )
+                    )
+                  ),
                 ],
               ),
             )
