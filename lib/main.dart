@@ -501,6 +501,7 @@ class _MyAppState extends State<MyApp> {
                                   fontSize: 14.0
                               ),
                             ),
+                            SizedBox(height: 48.0,)
                           ],
                         )
                       ],
