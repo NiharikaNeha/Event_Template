@@ -20,11 +20,11 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       body: Padding(
-        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 5.0, top: 50.0),
+        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 5.0, top: 60.0),
         child: Column(
           children: <Widget>[
             Container(
-              height: 360.0,
+              height: 330.0,
               width: MediaQuery
                   .of(context)
                   .size
@@ -35,64 +35,38 @@ class _MyAppState extends State<MyApp> {
               ),
               child: Column(
                 children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 50.0,
-                              width: 50.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(35.0),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/iecse.jpg'),
-                                      fit: BoxFit.fill
-                                  )
-                              ),
-                            ),
-                            SizedBox(width: 30.0,),
-                            Text(
-                              'IECSE',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(width: 195.0,),
-                            Container(
-                              height: 40.0,
-                              width: 40.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(35.0),
-                                color: Colors.white,
-                              ),
-                              child: IconButton(
-                                icon: Icon(Icons.more_vert),
-                              ),
-                            ),
-                          ],
+                  Row(
+                    children: <Widget>[
+                      ClipRRect(
+                        child: Container(
+                          height: 160.0,
+                          width: (MediaQuery.of(context).size.width) - 120.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(25.0)),
+                              image: DecorationImage(
+                                  image: AssetImage('assets/ieev.jpg'),
+                                  fit: BoxFit.cover
+                              )
+                          ),
                         ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 2.0,),
-                  ClipRRect(
-                    child: Container(
-                      height: 145.0,
-                      width: MediaQuery
-                          .of(context)
-                          .size
-                          .width,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/ieev.jpg'),
-                              fit: BoxFit.cover
-                          )
                       ),
-                    ),
+                      SizedBox(width: 10.0,),
+                      RaisedButton(
+                        color: Colors.white,
+                        child: Container(
+                          height: 160.0,
+                          width: 50.0,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                              image: DecorationImage(
+                                  image: AssetImage('assets/trophy.jpeg'),
+                                  fit: BoxFit.contain
+                              )
+                          ),
+                        ),
+                        onPressed: () => _onButtonPressed(),
+                      )
+                    ],
                   ),
                   SizedBox(height: 5.0,),
                   Padding(
@@ -165,14 +139,38 @@ class _MyAppState extends State<MyApp> {
                             ],
                           ),
                         ),
-                        SizedBox(width: 20.0,),
-                        RaisedButton(
-                          child: IconButton(
-                            icon: Icon(Icons.card_giftcard),
-                            color: Colors.white,
+                        SizedBox(width: 40.0,),
+                        Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Row(
+                            children: <Widget>[
+                              Column(
+                                children: <Widget>[
+                                  Container(
+                                    height: 50.0,
+                                    width: 50.0,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(35.0),
+                                        image: DecorationImage(
+                                            image: AssetImage('assets/iecse.jpg'),
+                                            fit: BoxFit.fill
+                                        )
+                                    ),
+                                  ),
+                                  SizedBox(height: 10.0,),
+                                  Text(
+                                    'IECSE',
+                                    textAlign: TextAlign.start,
+                                    style: TextStyle(
+                                      fontSize: 15.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                          onPressed: () => _onButtonPressed(),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -224,9 +222,9 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
-            SizedBox(height: 20.0,),
+            SizedBox(height: 40.0,),
             Container(
-              height: 360.0,
+              height: 330.0,
               width: MediaQuery
                   .of(context)
                   .size
@@ -237,58 +235,15 @@ class _MyAppState extends State<MyApp> {
               ),
               child: Column(
                 children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              height: 50.0,
-                              width: 50.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(35.0),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/iecse.jpg'),
-                                      fit: BoxFit.fill
-                                  )
-                              ),
-                            ),
-                            SizedBox(width: 30.0,),
-                            Text(
-                              'IECSE',
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(width: 195.0,),
-                            Container(
-                              height: 40.0,
-                              width: 40.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(35.0),
-                                color: Colors.white,
-                              ),
-                              child: IconButton(
-                                icon: Icon(Icons.more_vert),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 2.0,),
                   ClipRRect(
                     child: Container(
-                      height: 145.0,
+                      height: 160.0,
                       width: MediaQuery
                           .of(context)
                           .size
                           .width,
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(25.0), topRight: Radius.circular(25.0)),
                           image: DecorationImage(
                               image: AssetImage('assets/ieev.jpg'),
                               fit: BoxFit.cover
@@ -380,9 +335,17 @@ class _MyAppState extends State<MyApp> {
                         ),
                         SizedBox(width: 20.0,),
                         RaisedButton(
-                          child: IconButton(
-                            icon: Icon(Icons.card_giftcard),
-                            color: Colors.white,
+                          color: Colors.white,
+                          child: Container(
+                            height: 60.0,
+                            width: 50.0,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                    image: AssetImage('assets/trophy.jpeg'),
+                                    fit: BoxFit.contain
+                                )
+                            ),
                           ),
                           onPressed: () => _onButtonPressed(),
                         )
@@ -430,6 +393,29 @@ class _MyAppState extends State<MyApp> {
                             icon: Icon(Icons.favorite),
                             color: Colors.white,
                           ),
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Container(
+                              height: 30.0,
+                              width: 30.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25.0),
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/iecse.jpg'),
+                                      fit: BoxFit.fill
+                                  )
+                              ),
+                            ),
+                            Text(
+                              'IECSE',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
