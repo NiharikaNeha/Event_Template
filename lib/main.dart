@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
                       ClipRRect(
                         child: Container(
                           height: 160.0,
-                          width: (MediaQuery.of(context).size.width) - 120.0,
+                          width: (MediaQuery.of(context).size.width) - 150.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(topLeft: Radius.circular(25.0)),
                               image: DecorationImage(
@@ -51,21 +51,53 @@ class _MyAppState extends State<MyApp> {
                         ),
                       ),
                       SizedBox(width: 10.0,),
-                      RaisedButton(
-                        color: Colors.white,
-                        child: Container(
-                          height: 160.0,
-                          width: 50.0,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                              image: DecorationImage(
-                                  image: AssetImage('assets/trophy.jpeg'),
-                                  fit: BoxFit.contain
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                height: 50.0,
+                                width: 50.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                        image: AssetImage('assets/trophy.jpeg'),
+                                        fit: BoxFit.contain
+                                    )
+                                ),
+                              ),
+                              SizedBox(width: 10.0,),
+                              Text(
+                                'PRIZES',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17.0
+                                ),
                               )
+                            ],
                           ),
-                        ),
-                        elevation: 0.0,
-                        onPressed: () => _onButtonPressed(),
+                          SizedBox(height: 7.0,),
+                          Text(
+                            '1st    20,000/-',
+                            style: TextStyle(
+                                fontSize: 16.0
+                            ),
+                          ),
+                          SizedBox(height: 5.0,),
+                          Text(
+                            '2st    20,000/-',
+                            style: TextStyle(
+                                fontSize: 16.0
+                            ),
+                          ),
+                          SizedBox(height: 5.0,),
+                          Text(
+                            '3st    20,000/-',
+                            style: TextStyle(
+                                fontSize: 16.0
+                            ),
+                          )
+                        ],
                       )
                     ],
                   ),
@@ -444,23 +476,23 @@ class _MyAppState extends State<MyApp> {
                             ),
                             SizedBox(height: 7.0,),
                             Text(
-                              '1st    20,000/-',
+                              '  1st    20,000/-',
                               style: TextStyle(
-                                fontSize: 19.0
+                                fontSize: 16.0
                               ),
                             ),
                             SizedBox(height: 5.0,),
                             Text(
-                              '2st    20,000/-',
+                              '  2st    20,000/-',
                               style: TextStyle(
-                                  fontSize: 19.0
+                                  fontSize: 16.0
                               ),
                             ),
                             SizedBox(height: 5.0,),
                             Text(
-                              '3st    20,000/-',
+                              '  3st    20,000/-',
                               style: TextStyle(
-                                  fontSize: 19.0
+                                  fontSize: 16.0
                               ),
                             )
                           ],
