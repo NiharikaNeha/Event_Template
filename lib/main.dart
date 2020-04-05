@@ -36,14 +36,14 @@ class _MyAppState extends State<MyApp> {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(5.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Row(
                       children: <Widget>[
                         Row(
                           children: <Widget>[
                             Container(
-                              height: 70.0,
-                              width: 70.0,
+                              height: 50.0,
+                              width: 50.0,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(35.0),
                                   image: DecorationImage(
@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(width: 185.0,),
+                            SizedBox(width: 195.0,),
                             Container(
                               height: 40.0,
                               width: 40.0,
@@ -78,10 +78,10 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 5.0,),
+                  SizedBox(height: 2.0,),
                   ClipRRect(
                     child: Container(
-                      height: 130.0,
+                      height: 145.0,
                       width: MediaQuery
                           .of(context)
                           .size
@@ -173,8 +173,6 @@ class _MyAppState extends State<MyApp> {
                           ),
                           onPressed: () => _onButtonPressed(),
                         )
-                        //bottom modal
-
                       ],
                     ),
                   ),
@@ -240,14 +238,14 @@ class _MyAppState extends State<MyApp> {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(5.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Row(
                       children: <Widget>[
                         Row(
                           children: <Widget>[
                             Container(
-                              height: 70.0,
-                              width: 70.0,
+                              height: 50.0,
+                              width: 50.0,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(35.0),
                                   image: DecorationImage(
@@ -265,7 +263,7 @@ class _MyAppState extends State<MyApp> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(width: 185.0,),
+                            SizedBox(width: 195.0,),
                             Container(
                               height: 40.0,
                               width: 40.0,
@@ -282,10 +280,10 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 5.0,),
+                  SizedBox(height: 2.0,),
                   ClipRRect(
                     child: Container(
-                      height: 130.0,
+                      height: 145.0,
                       width: MediaQuery
                           .of(context)
                           .size
@@ -380,6 +378,14 @@ class _MyAppState extends State<MyApp> {
                             ],
                           ),
                         ),
+                        SizedBox(width: 20.0,),
+                        RaisedButton(
+                          child: IconButton(
+                            icon: Icon(Icons.card_giftcard),
+                            color: Colors.white,
+                          ),
+                          onPressed: () => _onButtonPressed(),
+                        )
                       ],
                     ),
                   ),
