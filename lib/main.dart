@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0,),
+                      SizedBox(width: 3.0,),
                       Column(
                         children: <Widget>[
                           Row(
@@ -66,37 +66,40 @@ class _MyAppState extends State<MyApp> {
                                     )
                                 ),
                               ),
-                              SizedBox(width: 10.0,),
-                              Text(
-                                'PRIZES',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 17.0
-                                ),
-                              )
+                              SizedBox(width: 4.0,),
+                              Column(
+                                children: <Widget>[
+                                  Text(
+                                    '1st  Rs. 20k',
+                                    style: TextStyle(
+                                        fontSize: 14.0
+                                    ),
+                                  ),
+                                  SizedBox(height: 8.0,),
+                                  Text(
+                                    '2st  Rs. 10k',
+                                    style: TextStyle(
+                                        fontSize: 14.0
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
+                          ),
+                          SizedBox(height: 5.0,),
+                          Text(
+                            '             3rd  Rs. 5k',
+                            style: TextStyle(
+                                fontSize: 14.0
+                            ),
                           ),
                           SizedBox(height: 7.0,),
                           Text(
-                            '1st    20,000/-',
+                            '           see more',
                             style: TextStyle(
-                                fontSize: 16.0
+                                fontSize: 14.0
                             ),
                           ),
-                          SizedBox(height: 5.0,),
-                          Text(
-                            '2st    20,000/-',
-                            style: TextStyle(
-                                fontSize: 16.0
-                            ),
-                          ),
-                          SizedBox(height: 5.0,),
-                          Text(
-                            '3st    20,000/-',
-                            style: TextStyle(
-                                fontSize: 16.0
-                            ),
-                          )
                         ],
                       )
                     ],
@@ -448,7 +451,7 @@ class _MyAppState extends State<MyApp> {
                             )
                           ],
                         ) ,
-                        SizedBox(width: 10.0,),
+                        SizedBox(width: 5.0,),
                         Column(
                           children: <Widget>[
                             Row(
@@ -464,37 +467,40 @@ class _MyAppState extends State<MyApp> {
                                       )
                                   ),
                                 ),
-                                SizedBox(width: 10.0,),
-                                Text(
-                                  'PRIZES',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 17.0
-                                  ),
-                                )
+                                SizedBox(width: 4.0,),
+                                Column(
+                                  children: <Widget>[
+                                    Text(
+                                      '1st  Rs. 20k',
+                                      style: TextStyle(
+                                          fontSize: 14.0
+                                      ),
+                                    ),
+                                    SizedBox(height: 8.0,),
+                                    Text(
+                                      '2st  Rs. 10k',
+                                      style: TextStyle(
+                                          fontSize: 14.0
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ],
+                            ),
+                            SizedBox(height: 5.0,),
+                            Text(
+                              '             3rd  Rs. 5k',
+                              style: TextStyle(
+                                  fontSize: 14.0
+                              ),
                             ),
                             SizedBox(height: 7.0,),
                             Text(
-                              '  1st    20,000/-',
+                              '           see more',
                               style: TextStyle(
-                                fontSize: 16.0
+                                  fontSize: 14.0
                               ),
                             ),
-                            SizedBox(height: 5.0,),
-                            Text(
-                              '  2st    20,000/-',
-                              style: TextStyle(
-                                  fontSize: 16.0
-                              ),
-                            ),
-                            SizedBox(height: 5.0,),
-                            Text(
-                              '  3st    20,000/-',
-                              style: TextStyle(
-                                  fontSize: 16.0
-                              ),
-                            )
                           ],
                         )
                       ],
