@@ -289,7 +289,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 5.0,),
+                  SizedBox(height: 3.0,),
                   Padding(
                     padding: EdgeInsets.only(top: 5.0, left: 15.0),
                     child: Row(
@@ -375,6 +375,57 @@ class _MyAppState extends State<MyApp> {
                                     ],
                                   ),
                                 ),
+                                SizedBox(width: 5.0,),
+                                Column(
+                                  children: <Widget>[
+                                    Row(
+                                      children: <Widget>[
+                                        Container(
+                                          height: 50.0,
+                                          width: 50.0,
+                                          decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              image: DecorationImage(
+                                                  image: AssetImage('assets/trophy.jpeg'),
+                                                  fit: BoxFit.contain
+                                              )
+                                          ),
+                                        ),
+                                        SizedBox(width: 4.0,),
+                                        Column(
+                                          children: <Widget>[
+                                            Text(
+                                              '1st  Rs. 20k',
+                                              style: TextStyle(
+                                                  fontSize: 14.0
+                                              ),
+                                            ),
+                                            SizedBox(height: 5.0,),
+                                            Text(
+                                              '2st  Rs. 10k',
+                                              style: TextStyle(
+                                                  fontSize: 14.0
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      '             3rd  Rs. 5k',
+                                      style: TextStyle(
+                                          fontSize: 14.0
+                                      ),
+                                    ),
+                                    SizedBox(height: 4.0,),
+                                    Text(
+                                      '           see more',
+                                      style: TextStyle(
+                                          fontSize: 14.0
+                                      ),
+                                    ),
+                                  ],
+                                )
                               ],
                             ),
                             SizedBox(height: 10.0,),
@@ -385,8 +436,46 @@ class _MyAppState extends State<MyApp> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
                                   Container(
-                                    height: 50.0,
-                                    width: 50.0,
+                                    height: 60.0,
+                                    width: 60.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(35.0),
+                                      color: Colors.white,
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.alarm),
+                                    ),
+                                  ),
+                                  SizedBox(width: 20.0,),
+                                  Container(
+                                    height: 60.0,
+                                    width: 60.0,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(35.0),
+                                        color: Colors.white
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.share),
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20.0,),
+                                  Container(
+                                    height: 60.0,
+                                    width: 60.0,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(35.0),
+                                        color: Colors.white
+                                    ),
+                                    child: IconButton(
+                                      icon: Icon(Icons.favorite),
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20.0,),
+                                  Container(
+                                    height: 60.0,
+                                    width: 60.0,
                                     child: Column(
                                       children: <Widget>[
                                         Container(
@@ -411,99 +500,11 @@ class _MyAppState extends State<MyApp> {
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(35.0),
-                                      color: Colors.white,
-                                    ),
-                                    child: IconButton(
-                                      icon: Icon(Icons.alarm),
-                                    ),
-                                  ),
-                                  Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(35.0),
-                                        color: Colors.white
-                                    ),
-                                    child: IconButton(
-                                      icon: Icon(Icons.share),
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  Container(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(35.0),
-                                        color: Colors.white
-                                    ),
-                                    child: IconButton(
-                                      icon: Icon(Icons.favorite),
-                                      color: Colors.white,
-                                    ),
-                                  ),
                                 ],
                               ),
                             )
                           ],
                         ) ,
-                        SizedBox(width: 5.0,),
-                        Column(
-                          children: <Widget>[
-                            Row(
-                              children: <Widget>[
-                                Container(
-                                  height: 50.0,
-                                  width: 50.0,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      image: DecorationImage(
-                                          image: AssetImage('assets/trophy.jpeg'),
-                                          fit: BoxFit.contain
-                                      )
-                                  ),
-                                ),
-                                SizedBox(width: 4.0,),
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      '1st  Rs. 20k',
-                                      style: TextStyle(
-                                          fontSize: 14.0
-                                      ),
-                                    ),
-                                    SizedBox(height: 8.0,),
-                                    Text(
-                                      '2st  Rs. 10k',
-                                      style: TextStyle(
-                                          fontSize: 14.0
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 5.0,),
-                            Text(
-                              '             3rd  Rs. 5k',
-                              style: TextStyle(
-                                  fontSize: 14.0
-                              ),
-                            ),
-                            SizedBox(height: 7.0,),
-                            Text(
-                              '           see more',
-                              style: TextStyle(
-                                  fontSize: 14.0
-                              ),
-                            ),
-                            SizedBox(height: 48.0,)
-                          ],
-                        )
                       ],
                     )
                   ),
@@ -550,7 +551,8 @@ class _MyAppState extends State<MyApp> {
               ],
             ),
           );
-        });
+        }
+     );
   }
 }
 
